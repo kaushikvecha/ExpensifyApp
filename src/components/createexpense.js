@@ -1,15 +1,19 @@
 import React from "react";
+import {connect } from "react-redux";
+//import uuid from "uuid";
+import {addExpense} from "../actions/expenses"
 import ExpenseForm from "./ExpenseForm";
-import moment from "moment";
-import "react-dates/initialize"
-import {SingleDatePicker} from "react-dates";
-import "react-dates/lib/css/_datepicker.css";
-const CreateExpense=()=>{
+const CreateExpense=(props)=>{
     return(
     <div>
     <h1>Add Expense</h1>
-    <ExpenseForm/>
+    <ExpenseForm onSubmit={(expense)=>
+        {
+            console.log(expense);
+            props.dispatch(addExpense(expense));
+            props.history.push("/")
+        }}/>
     </div>
     );
 }
-export default CreateExpense;
+export default connect()(CreateExpense);
