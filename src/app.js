@@ -14,14 +14,7 @@ const store=configStore();
 store.dispatch(addExpense({description:"water bill",amount:7800,createdAt:600}));
 store.dispatch(addExpense({description:"current bill",amount:300,createdAt:680}));
 store.dispatch(addExpense({description:"gas bill",amount:800,createdAt:800}));
-store.dispatch(setTextFilter("bill"));
-let state=store.getState();
-let visibleExpenses=getVisibleExpenses(state.expenses,state.filters);
-console.log(visibleExpenses);
-store.dispatch(setTextFilter("water"));
-state=store.getState();
-visibleExpenses=getVisibleExpenses(state.expenses,state.filters);
-console.log(visibleExpenses);
+
 
 const jsx=(
     <Provider store={store}>
