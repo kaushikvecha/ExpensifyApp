@@ -1,7 +1,14 @@
-# Git Commands
+For maintaining daily Expenses this React application will be useful 
 
-git init - Create a new git repo
-git status - View the changes to your project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+First clone the repo or download it.
+
+open command prompt or git bash and set path to this folder i.e. xxx/yyy/something/IndecisionApp
+
+Now Type
+
+yarn run dev-server
+
+Application will be running on localhost:8000
+
+if port is not available configure port in webpack.config.js file.
+
